@@ -1,0 +1,8 @@
+.idea
+.DS_Store
+__pycache__
+db_data
+venv
+db.sqlite3
+Dockerfile
+.gitignore

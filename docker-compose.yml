@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    environment:
+      - DATABASE_HOST=db
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./:/api-shop-django
+    ports:
+      - 8000:8000
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=antonio
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db_data/postgresql:/var/lib/postgresql/data
+
